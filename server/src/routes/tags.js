@@ -17,4 +17,28 @@ router.get('/', (req, res) => {
 		});
 });
 
+router.post('/', (req, res) => {
+	tableName
+		.insert(req.body)
+		.then(results => {
+			res.json(results[0]);
+		})
+		.catch(err => {
+			console.log(err);
+			res.sendStatus(500);
+		});
+});
+
+router.put('/:tagid', (req, res) => {
+	tableName
+		.update(req.params.tagid, req.body)
+		.then(results => {
+			res.json(results);
+		})
+		.catch(err => {
+			console.log(err);
+			res.sendStatus(500);
+		});
+});
+
 export default router;
