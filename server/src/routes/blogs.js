@@ -64,4 +64,16 @@ router.put('/:blogid', (req, res) => {
 		});
 });
 
+router.delete('/:blogid', (req, res) => {
+	tableName
+		.delete(req.params.blogid)
+		.then(results => {
+			res.json(results);
+		})
+		.catch(err => {
+			console.log(err);
+			res.sendStatus(500);
+		});
+});
+
 export default router;

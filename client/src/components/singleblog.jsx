@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
-import { one } from '../services/classes';
 
 export default class Singleblog extends Component {
 	constructor(props) {
@@ -17,7 +16,6 @@ export default class Singleblog extends Component {
 			.then(blog => {
 				this.setState({ blog });
 			});
-		// one(this.props.match.params.id);
 	}
 	render() {
 		return (

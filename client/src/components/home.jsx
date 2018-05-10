@@ -10,7 +10,10 @@ export default class Home extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<div className="jumbotron jumbotron-fluid text-center" style={{ backgroundColor: 'ivory' }}>
+				<div
+					className="jumbotron jumbotron-fluid text-center"
+					style={{ backgroundColor: 'ivory', border: 'solid', borderColor: 'burlywood' }}
+				>
 					<div className="container">
 						<h1 className="display-4">Welcome to my travel blog!</h1>
 					</div>

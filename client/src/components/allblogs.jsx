@@ -39,7 +39,7 @@ export default class Allblogs extends Component {
 						<div className="card-body">
 							<h5 className="card-title">{blog.title}</h5>
 							<p className="card-text">{blog.content.substring(0, 100)}...</p>
-							<Link className="btn btn-info" to={`/${blog.id}`}>
+							<Link className="btn btn-dark" to={`/${blog.id}`}>
 								Read more...
 							</Link>
 						</div>
